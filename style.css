@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.box {
+  flex: 1 1 calc(33.33% - 40px); /* 3ta yonma-yon holat uchun */
+  min-width: 200px;
+  height: 150px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* O‘rtacha ekranlar (planshetlar) */
+@media (max-width: 900px) {
+  .box {
+    flex: 1 1 calc(50% - 40px); /* 2ta yonma-yon */
+  }
+}
+
+/* Kichik ekranlar (telefonlar) */
+@media (max-width: 600px) {
+  .box {
+    flex: 1 1 100%; /* bittadan ustma-ust */
+    background-color:red;
+  }
+}
